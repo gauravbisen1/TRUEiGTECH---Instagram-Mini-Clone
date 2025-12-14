@@ -5,6 +5,14 @@ This project is a simplified Instagram clone to demonstrate full-stack web devel
 
 The application follows a clean client-server architecture using the MERN Stack.
 
+---
+
+## Live Backend
+**Base URL:** https://backend-instagram-87hc.onrender.com
+
+>Note: some routes require authentication via JWT.
+
+---
 
 ## Features
 - User authentication(Signup, Login, Logout)
@@ -16,17 +24,24 @@ The application follows a clean client-server architecture using the MERN Stack.
 -Postman collection included for API testing
 
 ## Tech Stack
-- **Frontend**: React.js, HTML, CSS, TailwindCSS
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **Authentication**: JWT(JSON Web Token)
-- **Tools**: Postman
+- **Frontend:** React.js, HTML, CSS, TailwindCSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** JWT(JSON Web Token)
+- **Tools:** Postman
+
+---
 
 ###Setup Instructions
 
 ### Prerequisites
 - Node.js and npm installed
-- MongoDB running locally or a cloud instance
+- MongoDB running locally or via MongoDB Atlas
+
+---
+
+### Environment Variables
+Create a `.env` file inside the `Backend` folder and add the following: 
 
 ```env
 PORT=8080
@@ -38,6 +53,7 @@ replace the values with your actual credentials.
 ### Steps to Run the project
 
 1. Clone the repository:  
+
 git clone https://github.com/gauravbisen1/TRUEiGTECH---Instagram-Mini-Clone
 
 2. Install backenddependencies and start server:

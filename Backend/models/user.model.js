@@ -29,22 +29,22 @@ const userSchema = new mongoose.Schema({
         }
     ]
 },
-{
-    timestamps: true
-});
+    {
+        timestamps: true
+    });
 
-userSchema.pre('save', async function (){
+userSchema.pre('save', async function () {
     const user = this;
-    if(!user.isModified('password')) return;
+    if (!user.isModified('password')) return;
 
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(user.password, salt);
     user.password = hashedPassword;
 });
 
-userSchema.methods.comparePassword = async function(candidatePasword){
+userSchema.methods.comparePassword = async function (candidatePasword) {
     try {
-        const isMatch = await bcrypt.compare(candidatePasword,this.password);
+        const isMatch = await bcrypt.compare(candidatePasword, this.password);
         return isMatch;
     } catch (error) {
         throw error;

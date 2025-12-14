@@ -1,10 +1,10 @@
-const {jsonAuthMiddleware,generateToken} = require('../middlewares/auth.middleware')
+const { jsonAuthMiddleware, generateToken } = require('../middlewares/auth.middleware')
 const asyncHandler = require('../utils/asyncHandler')
 const User = require('../models/user.model');
 
 
 //signup
-const registerUser = asyncHandler(async (req,res)=>{
+const registerUser = asyncHandler(async (req, res) => {
     try {
         const data = req.body;
         const newUser = new User(data);
@@ -19,19 +19,19 @@ const registerUser = asyncHandler(async (req,res)=>{
         console.log("Token is ", token);
 
         console.log("User saved :", response);
-        res.status(201).json({response: response, token: token});
+        res.status(201).json({ response: response, token: token });
     } catch (error) {
-        res.status(500).json({err: 'Error saving user'})
+        res.status(500).json({ err: 'Error saving user' })
     }
 })
 
 //login
-const loginUser = async(req,res)=>{
+const loginUser = async (req, res) => {
     try {
-        const {username, password} = req.body;
-        const user = await User.findOne({username: username});
-        if(!user || !(await user.comparePassword(password))){
-            return res.status(401).json({err:'Invalid username or Password'});
+        const { username, password } = req.body;
+        const user = await User.findOne({ username: username });
+        if (!user || !(await user.comparePassword(password))) {
+            return res.status(401).json({ err: 'Invalid username or Password' });
         }
         const payload = {
             id: user.id,
@@ -45,14 +45,14 @@ const loginUser = async(req,res)=>{
                 username: user.username
             }
         });
-        
+
     } catch (error) {
         console.log("Error during login", error);
-        res.status(500).json({err: 'Internal Server error'})
-        
+        res.status(500).json({ err: 'Internal Server error' })
+
     }
 }
 
- 
 
-module.exports = {registerUser,loginUser}
+
+module.exports = { registerUser, loginUser }
