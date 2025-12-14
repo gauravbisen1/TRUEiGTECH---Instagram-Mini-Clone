@@ -28,7 +28,6 @@ This project is a simplified Instagram clone to demonstrate full-stack web devel
 ### Steps to Run the project
 
 1. Clone the repository:
-
 git clone https://github.com/gauravbisen1/TRUEiGTECH---Instagram-Mini-Clone
 
 2. Install backenddependencies and start server:
