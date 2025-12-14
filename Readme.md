@@ -19,9 +19,10 @@ The application follows a clean client-server architecture using the MERN Stack.
 - Create, edit, and delete posts
 - Like and Comment on posts
 - Follow/unfollow users
--Backend APIs with Express.js and Storing user information in MongoDB
+- Backend APIs with Express.js and Storing user information in MongoDB
+- Project follows RESTful API principles
 - **JWT (JSON Web Tokes)** for secure authentication/authorization
--Postman collection included for API testing
+- Postman collection included for API testing
 
 ## Tech Stack
 - **Frontend:** React.js, HTML, CSS, TailwindCSS
