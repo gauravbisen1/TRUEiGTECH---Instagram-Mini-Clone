@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import api from '../api/axios'
 import PostCard from '../components/PostCard'
-
+import Navbar from '../components/Navbar'
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -10,6 +10,7 @@ const Feed = () => {
   }, []);
   return (
     <div className='min-h-screen bg-gray-50 flex justify-center'>
+      <Navbar/>
       <div className='w-full max-w-md px-2 py-4'>
         <h2 className='textxl font-semibold text-center mb-4'>Feed</h2>
         <div className='space -y-6'>

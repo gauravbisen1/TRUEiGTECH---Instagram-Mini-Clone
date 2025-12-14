@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "ae3ab04b-2786-4c22-9b40-30123be267a0",
+		"name": "Instagram Mini Project",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50601459",
+		"_collection_link": "https://restless-crescent-6060129.postman.co/workspace/Gaurav-Bisen's-Workspace~ed4f3a13-5ba6-4df3-812f-47fb5f414afe/collection/50601459-ae3ab04b-2786-4c22-9b40-30123be267a0?action=share&source=collection_link&creator=50601459"
+	},
+	"item": [
+		{
+			"name": "Follow/Unfollow Testing",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Post Testing",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2U0YzhmNGRmYzY5ZWVhZDcwMjczNSIsInVzZXJuYW1lIjoiZ2F1cmF2IiwiaWF0IjoxNzY1Njk0NDEzLCJleHAiOjE3NjU3ODA4MTN9.S8YWt20kvALU6gEgcnL-lI8ADkpj0aet4UTCOHyMZOI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{miniproject}}posts/",
+					"host": [
+						"{{miniproject}}posts"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment Pesting",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2U0YzhmNGRmYzY5ZWVhZDcwMjczNSIsInVzZXJuYW1lIjoiZ2F1cmF2IiwiaWF0IjoxNzY1Njk0NDEzLCJleHAiOjE3NjU3ODA4MTN9.S8YWt20kvALU6gEgcnL-lI8ADkpj0aet4UTCOHyMZOI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"Nice post 🔥\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{miniproject}}posts/693e4f3e750c1c0ad8ad1ced/comment",
+					"host": [
+						"{{miniproject}}posts"
+					],
+					"path": [
+						"693e4f3e750c1c0ad8ad1ced",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like/unlike Testing",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2U0YzhmNGRmYzY5ZWVhZDcwMjczNSIsInVzZXJuYW1lIjoiZ2F1cmF2IiwiaWF0IjoxNzY1Njk0NDEzLCJleHAiOjE3NjU3ODA4MTN9.S8YWt20kvALU6gEgcnL-lI8ADkpj0aet4UTCOHyMZOI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{miniproject}}posts/693e4f3e750c1c0ad8ad1ced/like",
+					"host": [
+						"{{miniproject}}posts"
+					],
+					"path": [
+						"693e4f3e750c1c0ad8ad1ced",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all follwers posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2U0YzhmNGRmYzY5ZWVhZDcwMjczNSIsInVzZXJuYW1lIjoiZ2F1cmF2IiwiaWF0IjoxNzY1Njk0NDEzLCJleHAiOjE3NjU3ODA4MTN9.S8YWt20kvALU6gEgcnL-lI8ADkpj0aet4UTCOHyMZOI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"imageUrl\": \"https://picsum.photos/600\",\r\n  \"caption\": \"My first post 🔥\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{miniproject}}posts",
+					"host": [
+						"{{miniproject}}posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login/SignUp Testing",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJpZCI6IjY5M2U0MWY3NzRkYzFkZmU3MzZlNDYyMCIsInVzZXJuYW1lIjoidGVzdCJ9LCJpYXQiOjE3NjU2ODc3OTksImV4cCI6MTc2NTY4NzgwMn0.6JmCE4P87olX73Q4s6dwUAfUmStXcuBFGLhSAv4JrF4",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"gaurav\",\r\n    \"password\": \"gaurav1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{miniproject}}auth/login",
+					"host": [
+						"{{miniproject}}auth"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Post Testing",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"gaurav\",\r\n    \"email\":\"gaurav@gmail.com\",\r\n    \"password\": \"gaurav1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{miniproject}}posts",
+					"host": [
+						"{{miniproject}}posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
