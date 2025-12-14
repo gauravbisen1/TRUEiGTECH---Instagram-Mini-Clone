@@ -20,7 +20,7 @@ The application follows a clean client-server architecture using the MERN Stack.
 - Like and Comment on posts
 - Follow/unfollow users
 - Backend APIs with Express.js and Storing user information in MongoDB
-- Project follows RESTful API principles
+- Project follows **RESTful** API principles
 - **JWT (JSON Web Tokes)** for secure authentication/authorization
 - Postman collection included for API testing
 
