@@ -3,6 +3,8 @@
 ## Overview
 This project is a simplified Instagram clone to demonstrate full-stack web development skills. It  allows users to sign up, login, create posts, like and comment on posts, and follow other users.
 
+The application follows a clean client-server architecture using the MERN Stack.
+
 
 ## Features
 - User authentication(Signup, Login, Logout)
@@ -14,20 +16,28 @@ This project is a simplified Instagram clone to demonstrate full-stack web devel
 -Postman collection included for API testing
 
 ## Tech Stack
-- Frontend: React.js, HTML, CSS, TailwindCSS
-- Backend: Node.js, Express.js
-- Database: MongoDB
-- Tools: Postman
+- **Frontend**: React.js, HTML, CSS, TailwindCSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Authentication**: JWT(JSON Web Token)
+- **Tools**: Postman
 
-##Setup Instructions
+###Setup Instructions
 
 ### Prerequisites
 - Node.js and npm installed
 - MongoDB running locally or a cloud instance
 
+```env
+PORT=8080
+MONGODB_URL=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+
+replace the values with your actual credentials.
+
 ### Steps to Run the project
 
-1. Clone the repository:
+1. Clone the repository:  
 git clone https://github.com/gauravbisen1/TRUEiGTECH---Instagram-Mini-Clone
 
 2. Install backenddependencies and start server:
@@ -46,3 +56,8 @@ npm run dev
 
 frontend: http://localhost:5173
 backend: http://localhost:8080
+
+
+### Author
+Gaurav Bisen
+Built with a focus on clean code, scalability, and real-world backend practices.
